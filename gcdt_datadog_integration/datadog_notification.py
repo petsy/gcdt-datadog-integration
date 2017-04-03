@@ -58,7 +58,6 @@ def datadog_notification(params):
     """
     context, config = params
     tool = context['tool']
-    print(config)
     if 'plugins' not in config or 'datadog_integration' not in config['plugins']:
         return
     api_key = config['plugins']['datadog_integration'].get('datadog_api_key', None)
