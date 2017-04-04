@@ -58,9 +58,9 @@ def datadog_notification(params):
     """
     context, config = params
     tool = context['tool']
-    if 'plugins' not in config or 'datadog_integration' not in config['plugins']:
+    if 'plugins' not in config or 'gcdt_datadog_integration' not in config['plugins']:
         return
-    api_key = config['plugins']['datadog_integration'].get('datadog_api_key', None)
+    api_key = config['plugins']['gcdt_datadog_integration'].get('datadog_api_key', None)
     if api_key.startswith('lookup'):
         return
     metric = 'gcdt.%s' % context['tool']
@@ -122,9 +122,9 @@ def datadog_error(params):
                    config - The stack details, etc..)
     """
     context, config = params
-    if 'plugins' not in config or 'datadog_integration' not in config['plugins']:
+    if 'plugins' not in config or 'gcdt_datadog_integration' not in config['plugins']:
         return
-    api_key = config['plugins']['datadog_integration'].get('datadog_api_key', None)
+    api_key = config['plugins']['gcdt_datadog_integration'].get('datadog_api_key', None)
     if api_key.startswith('lookup'):
         return
     tags = _datadog_get_tags(context)

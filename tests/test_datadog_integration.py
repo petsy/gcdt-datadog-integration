@@ -21,7 +21,7 @@ def test_datadog_notification_invalid_token():
             }
         },
         'plugins': {
-            'datadog_integration': {
+            'gcdt_datadog_integration': {
                 'datadog_api_key': 'xoxp-12345678901-12345678901-12345678901-4e6es20339'
             }
         }
@@ -43,7 +43,7 @@ def test_datadog_notification(mocked_datadog_metric, mocked_datadog_event):
             }
         },
         'plugins': {
-            'datadog_integration': {
+            'gcdt_datadog_integration': {
                 'datadog_api_key': 'foo_bar_1234'
             }
         }
@@ -69,7 +69,7 @@ def test_datadog_notification_tenkai(mocked_datadog_metric, mocked_datadog_event
             }
         },
         'plugins': {
-            'datadog_integration': {
+            'gcdt_datadog_integration': {
                 'datadog_api_key': 'foo_bar_1234'
             }
         }
@@ -95,7 +95,7 @@ def test_datadog_error(mocked_datadog_metric):
             }
         },
         'plugins': {
-            'datadog_integration': {
+            'gcdt_datadog_integration': {
                 'datadog_api_key': 'foo_bar_1234'
             }
         }
